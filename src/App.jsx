@@ -1,11 +1,12 @@
-import PokemonCard from "./components/PokemonCard"
+import React from "react";
+import PokemonCard from "./components/PokemonCard.jsx"
 
 function App() {
-return (
+  return ( 
   <div>
     <PokemonCard />
   </div>
-);
+  );
 }
 
 export default App;
