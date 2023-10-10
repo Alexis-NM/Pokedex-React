@@ -12,9 +12,8 @@ const pokemonList = [
     },
 ];
 
-function PokemonCard() {
-    const pokemon = pokemonList[1]
-   
+function PokemonCard(props) {   
+    const { pokemon } = props;
     return(
     <figure>
     {pokemon.imgSrc ? 
