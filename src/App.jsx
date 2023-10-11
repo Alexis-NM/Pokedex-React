@@ -1,5 +1,7 @@
 import React from "react";
 import PokemonCard from "./components/PokemonCard.jsx"
+import PropTypes from "prop-types";
+
 
 function App() {
   
