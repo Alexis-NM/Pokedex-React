@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 
 
 function App() {
-  
   const pokemonList = [
     {
         name: "bulbasaur",
@@ -16,9 +15,10 @@ function App() {
        imgSrc: "",
     },
 ];
+  
   return ( 
   <div>
-    <PokemonCard pokemon={pokemon}/>
+    <PokemonCard pokemon={pokemonList[0]}/>
   </div>
   );
 }
