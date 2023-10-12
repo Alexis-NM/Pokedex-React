@@ -1,15 +1,16 @@
 import React from "react";
-import PropTypes from "prop-types";
-
 
 function NavBar (props) {
 
-    const {clickPrecedent, clickSuivant} = props
+    const {pokemonList, setPokemonIndex} = props
 
  return (
     <div>
-     <button onClick={clickPrecedent}>Précedent</button>
-     <button onClick={clickSuivant}>Suivant</button>
+     {pokemonList.map((pokemon, index) => (
+        <button key = {index} onClick={() => setPokemonIndex(index)}>{pokemon.name}
+        </button>
+     )) 
+    }
     </div>
 )   
 }
