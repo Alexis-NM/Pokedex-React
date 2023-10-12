@@ -2,13 +2,14 @@ import React from "react";
 import PokemonCard from "./components/PokemonCard.jsx"
 import PropTypes from "prop-types";
 import { useState } from "react";
+import NavBar from "./components/NavBar.jsx"
 
 
 function App() {
   
   const [pokemonIndex, setPokemonIndex] = useState(0);
 
- const pokemonList = [
+  const pokemonList = [
     {
         name: "bulbasaur",
         imgSrc:
@@ -34,24 +35,26 @@ function App() {
       },
     ];
 
-  
-  const pokemonPrecedent = () => {
-    if (pokemonIndex > 0) {
-      setPokemonIndex(pokemonIndex - 1)
-    }
+    const pokemonPrecedent = () => {
+      if (pokemonIndex > 0) {
+          setPokemonIndex(pokemonIndex - 1)
+      }
   };
-
-const pokemonSuivant = () => {
-if (pokemonIndex < pokemonList.length - 1){
-  setPokemonIndex(pokemonIndex + 1);
-}
-};
+  
+    const pokemonSuivant = () => {
+      if (pokemonIndex < pokemonList.length - 1){
+          setPokemonIndex(pokemonIndex + 1);
+      }
+  };
 
   return ( 
   <div>
     <PokemonCard pokemon={pokemonList[pokemonIndex]}/>
-    <button onClick={pokemonPrecedent}>Précedent</button>
-    <button onClick={pokemonSuivant}>Suivant</button>
+    
+    <NavBar 
+    clickPrecedent = {pokemonPrecedent}
+    clickSuivant = {pokemonSuivant}
+    />
   </div>
   );
 }
