@@ -7,7 +7,7 @@ function NavBar (props) {
  return (
     <div>
      {pokemonList.map((pokemon, index) => (
-        <button key = {index} onClick={() => setPokemonIndex(index)}>{pokemon.name}
+        <button key = {pokemon.imgSrc} onClick={() => setPokemonIndex(index)}>{pokemon.name}
         </button>
      )) 
     }
